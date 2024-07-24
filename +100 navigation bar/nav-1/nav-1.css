@@ -1,0 +1,35 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+/*stylign the navigation and the content on it*/
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(75, 75, 75);
+    block-size: 80px;
+}
+ul{
+    display: flex;
+    align-items: center;
+    padding-inline-end: 15px;
+}
+ul li{
+    list-style: none;
+}
+.li{
+    text-decoration: none;
+}
+.logo,.li{
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+    padding: 15px;
+    block-size: 100%;
+    display: flex;
+    align-items: center;
+}
+
+
