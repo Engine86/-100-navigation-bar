@@ -3,13 +3,17 @@
     margin: 0%;
     box-sizing: border-box;
 }
+body{
+    background-color: rgba(5, 5, 5, 0.178);
+}
 /*stylign the navigation and the content on it*/
 .navigation{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: rgba(27, 26, 26, 0.178);
+    background-color:rgba(4, 4, 4, 0.178);
     block-size: 80px;
+    padding:20px
 }
 ul{
     display: flex;
@@ -18,18 +22,41 @@ ul{
 }
 ul li{
     list-style: none;
-}
-.li{
     text-decoration: none;
 }
-.logo,.li{
+.logo,.links{
     text-decoration: none;
     color: black;
     font-size: larger;
     padding: 15px;
     block-size: 100%;
-    display: flex;
-    align-items: center;
 }
-
-
+.navigation .menu-btn,#click{
+    display: none;
+}
+/*make the navigation responsive*/
+@media(max-width:500px){
+    .navigation .menu-btn{
+        color: black;
+        display:block;
+    }
+    #click:checked ~.menu-btn i:before{
+        content: "\f00d";
+    }
+    .navigation ul{
+        position: fixed;
+        inset-block-start: 80px;
+        inset-inline-start: -100%;
+        background-color: rgba(28, 28, 28, 0.178);
+        block-size: 100vh;
+        inline-size: 100%;
+        display: block;
+        text-align: center;
+    }
+    #click:checked ~ ul{
+        inset-inline-start: 0%;
+    }
+    .navigation ul li{
+        padding: 40px 0px;
+    }
+}
